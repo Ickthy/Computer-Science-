@@ -1,0 +1,32 @@
+int speed1 = 9;
+int motor1a = 6;
+int motor1b = 7;
+int potPin = 0;
+int potValue = 0;
+int button = 2;
+int ctrl1 = 0;
+int ctrl2 = 1;
+int test1 = HIGH;
+int test2 = LOW;
+
+void setup() {
+   pinMode(speed1, OUTPUT);
+   pinMode(motor1a, OUTPUT);
+   pinMode(motor1b, OUTPUT);
+   pinMode(potPin, INPUT);
+   pinMode(button, INPUT);
+}
+
+void loop() {
+   potValue = analogRead(potPin);
+   potValue = map(potValue, 0, 1023, 0, 255);
+   analogWrite(speed1, potValue);
+   digitalWrite(motor1a, test1);
+   digitalWrite(motor1b, test2);
+  2 & 1;
+  if(digitalRead(button) == HIGH){
+    test1 = LOW;
+    test2 = HIGH;
+  }
+}
+
